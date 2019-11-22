@@ -17,13 +17,13 @@ void gotoxy(int x, int y)
 double game_setup(double *pst)
 {
 	double game_time;
-	printf("°ÔÀÓÀÇ Á¦ÇÑ ½Ã°£(ÃÊ ´ÜÀ§)À» ÀÔ·ÂÇÏ°í Enter>");
+	printf("ê²Œì„ì˜ ì œí•œ ì‹œê°„(ì´ˆ ë‹¨ìœ„)ì„ ì…ë ¥í•˜ê³  Enter>");
 	scanf("%lf", &game_time);
 	system("cls");
 	gotoxy(1, 1);
-	printf("Á¦ÇÑ½Ã°£:%5.1f ÃÊ", game_time);
+	printf("ì œí•œì‹œê°„:%5.1f ì´ˆ", game_time);
 	gotoxy(30, 1);
-	printf("°æ°ú½Ã°£:%4.1F ÃÊ", *pst);
+	printf("ê²½ê³¼ì‹œê°„:%4.1F ì´ˆ", *pst);
 	gotoxy(38, 6);
 	return game_time;
 }
@@ -35,7 +35,7 @@ int main(void)
 	start = clock();
 	gaming_time(start, &pst);
 	gotoxy(1, 15);
-	printf("°ÔÀÓÀ» Á¾·áÇÕ´Ï´Ù. \n");
+	printf("ê²Œì„ì„ ì¢…ë£Œí•©ë‹ˆë‹¤. \n");
 	display_start();
 	start = clock();
 	pst = 0;
@@ -51,12 +51,12 @@ void gaming_time(clock_t start, double *pst)
 	end = clock();
 	*pst = (double)(end - start) / CLK_TCK;
 	gotoxy(30, 1);
-	printf("°æ°ú½Ã°£:%4.1fÃÊ", *pst);
+	printf("ê²½ê³¼ì‹œê°„:%4.1fì´ˆ", *pst);
 }
 void display_start()
 {
 	gotoxy(1, 13);
-	printf("¾Æ¹«Å°³ª ´©¸£¸é °æ±â¸¦ ½ÃÀÛÇÕ´Ï´Ù. ");
+	printf("ì•„ë¬´í‚¤ë‚˜ ëˆ„ë¥´ë©´ ê²½ê¸°ë¥¼ ì‹œì‘í•©ë‹ˆë‹¤. ");
 	getch();
 	gotoxy(1, 12);
 	printf("                                    ");
