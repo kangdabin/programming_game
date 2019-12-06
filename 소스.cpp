@@ -469,5 +469,6 @@ int main() {
 	gotoxy(12, 16);
 	printf("게임이 종료되었습니다!!!");
 	_getch();
+
 	return 0;
 }
