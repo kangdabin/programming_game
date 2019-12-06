@@ -1,9 +1,15 @@
 #include<iostream>
+
 #include<stdio.h>
+
 #include<conio.h>
+
 #include<Windows.h>
+
 #include<thread>
+
 #include<process.h>
+
 #pragma warning (disable : 4996)
 
 using std::thread;
@@ -167,7 +173,7 @@ void titleDraw(void)
 	printf("\n\n\n\n"); // 맨위에 4칸 개행  
 	printf("        #####    ###    ###    #    ####   ##### \n");
 	printf("        #       #      #      # #   #   #  #     \n");
-    printf("        ####    ####   #     #####  ####   ####  \n");
+    	printf("        ####    ####   #     #####  ####   ####  \n");
 	printf("        #           #  #     #   #  #      #     \n");
 	printf("        #####   ####    ###  #   #  #      ##### \n");
 }
