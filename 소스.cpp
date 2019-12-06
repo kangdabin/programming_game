@@ -1,45 +1,83 @@
 #include<iostream>
+
 #include<stdio.h>
+
 #include<conio.h>
+
 #include<Windows.h>
+
 #include<thread>
+
 #include<process.h>
+
 #pragma warning (disable : 4996)
 
 using std::thread;
 
 // 키보드 값  
+
 #define UP 0
+
 #define DOWN 1
+
 #define LEFT 2
+
 #define RIGHT 3
+
 #define SUBMIT 4 // 선택(스페이스바)  
 
+
+
 int playing = 1;
+
 int mKey;
+
 double game_time;
+
 char tempMap[14][56];
+
 int playflag = 1;
+
 int Mx = 20;
+
 int My = 6;
+
 int cX = 0;
+
 int cY = 0;
 
+
+
 void t_fuction();
+
 void drawUI(int pX, int pY, int pKey);
+
 int move(char(*tMap)[56], int* pX, int* pY, int _x, int _y, int* pKey);
+
 void gLoop(void);
+
 void drawMap(int* pX, int* pY, char(*tMap)[56]);
+
 void infoDraw(void);
+
 int menuDraw(void);
+
 void titleDraw(void);
+
 int keyControl(void);
+
 void setColor(int forground, int background);
+
 void display_start();
+
 void gaming_time(clock_t start, double* pst);
+
 double game_setup(double* pst);
+
 void gotoxy(int x, int y);
+
 void init(void);
+
 
 enum {
 	black,
@@ -167,7 +205,7 @@ void titleDraw(void)
 	printf("\n\n\n\n"); // 맨위에 4칸 개행  
 	printf("        #####    ###    ###    #    ####   ##### \n");
 	printf("        #       #      #      # #   #   #  #     \n");
-    printf("        ####    ####   #     #####  ####   ####  \n");
+    	printf("        ####    ####   #     #####  ####   ####  \n");
 	printf("        #           #  #     #   #  #      #     \n");
 	printf("        #####   ####    ###  #   #  #      ##### \n");
 }
@@ -469,5 +507,6 @@ int main() {
 	gotoxy(12, 16);
 	printf("게임이 종료되었습니다!!!");
 	_getch();
+
 	return 0;
 }
